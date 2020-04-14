@@ -7,4 +7,4 @@
   Covid-19 Estimator App
 </h1>
 
-An overly simplified COVID-19 infection estimator
+An overly simplified COVID-19 infection impact estimator
