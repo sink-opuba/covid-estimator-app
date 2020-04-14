@@ -1,0 +1,22 @@
+.header {
+  background-color: $covid-color;
+  text-align: center;
+}
+
+.header-text {
+  padding: 0.3rem 0 0.8rem;
+  & a,
+  & a:focus {
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-text {
+    & a {
+      padding: 0.7rem 0.3rem 1rem;
+      font-size: 2rem;
+    }
+  }
+}
