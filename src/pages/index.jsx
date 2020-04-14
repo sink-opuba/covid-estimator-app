@@ -2,19 +2,14 @@ import React, { useState } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import EstimatorForm from "../components/form"
-import Spinner from "../components/spinner"
 import covid19ImpactEstimator from "../estimator"
 
 const IndexPage = () => {
   const [impactData, setImpactData] = useState(null)
-  const [loading, setLoading] = useState(false)
   const estimateData = async (data) => {
-    setLoading(true)
     const impactData = await covid19ImpactEstimator(data)
     setImpactData(impactData)
-    setLoading(false)
   }
-  console.log(impactData)
   return (
     <Layout>
       <SEO title="Home" />
@@ -24,7 +19,6 @@ const IndexPage = () => {
           form and get impact estimate for your region.
         </h2>
         <EstimatorForm handleData={estimateData} />
-        {loading && <Spinner />}
 
         {impactData && (
           <div className="estimate-result mt-5">
