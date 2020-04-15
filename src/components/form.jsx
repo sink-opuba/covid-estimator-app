@@ -15,7 +15,7 @@ const EstimatorForm = ({ handleData }) => {
     population: 66622705,
     totalHospitalBeds: 1380614,
   })
-
+  
   const handleChange = (event) => {
     event.preventDefault()
     const { name, value } = event.target
